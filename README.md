@@ -13,7 +13,7 @@ A Flask-based web application for managing student registrations with an admin d
   - Fixed form validation to support custom school names
 
 - **October 18, 2025**: Initial setup for Replit environment
-  - Installed Python 3.11 and all dependencies
+  - Installed Python 3.12 and all dependencies
   - Configured gunicorn server on port 5000
   - Updated .gitignore for Python/Flask project
   - Set up workflow for production deployment
