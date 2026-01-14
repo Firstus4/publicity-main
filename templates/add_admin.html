@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<td>{{ admin.created_at.strftime('%b %d, %Y') if admin.created_at else '—' }}</td>
+
+<div class="container mt-4">
+  <h3 class="mb-3">Add New Admin</h3>
+  <form method="POST" action="{{ url_for('admin.add_admin') }}">
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" name="email" class="form-control" placeholder="Enter new admin email" required>
+    </div>
+    <div class="mb-3">
+      <label>Password</label>
+      <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Admin</button>
+    <a href="{{ url_for('admin.dashboard') }}" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+{% endblock %}
